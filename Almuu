@@ -1,0 +1,18 @@
+document.getElementById('registrationForm').addEventListener('submit', function(e) {
+    e.preventDefault(); // Stop page refresh
+
+    // 1. Get Values
+    const name = document.getElementById('name').value;
+    const email = document.getElementById('email').value;
+    const ticket = document.getElementById('ticketType').value;
+
+    // 2. Create List Item
+    const li = document.createElement('li');
+    li.innerHTML = `<strong>${name}</strong> - ${ticket} <br> <small>${email}</small>`;
+
+    // 3. Add to UI
+    document.getElementById('displayList').appendChild(li);
+
+    // 4. Reset Form
+    this.reset();
+});
