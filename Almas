@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Pro | Registration</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Event Registration</h2>
+        <form id="registrationForm">
+            <input type="text" id="name" placeholder="Full Name" required>
+            <input type="email" id="email" placeholder="Email Address" required>
+            <select id="ticketType">
+                <option value="General">General Admission</option>
+                <option value="VIP">VIP Pass</option>
+            </select>
+            <button type="submit">Register Now</button>
+        </form>
+
+        <div class="attendee-list">
+            <h3>Registered Attendees</h3>
+            <ul id="displayList"></ul>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
