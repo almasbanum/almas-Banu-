@@ -1,0 +1,33 @@
+<input type="radio" name="mode"> Online<br>
+
+<input type="radio" name="mode"> Offline<br><br>
+
+<label>Comments:</label><br>
+
+<textarea rows="4" cols="40"></textarea>
+
+<br><br>
+
+<input type="checkbox"> I confirm that the above details are correct.
+
+<br><br>
+
+<input type="submit" value="Submit">
+
+<input type="reset" value="Reset">
+
+</form>
+
+<hr>
+
+<h3>Contact Information</h3>
+
+<p>Contact Email:alsh@gmail.om</p>
+
+<p>Help Desk Number: 9342886107</p>
+
+<p>© 2026 Graphic Design Workshop</p>
+
+</body>
+
+</html>
