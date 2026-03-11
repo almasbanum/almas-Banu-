@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Graphic Design Workshop Registration</title>
+
+<style>
+
+body{
+font-family: Arial;
+background: linear-gradient(to right,#ff9a9e,#fad0c4);
+margin:40px;
+}
+
+h1{
+color:white;
+background:linear-gradient(to right,#ff512f,#dd2476);
+text-align:center;
+padding:15px;
+}
+
+h2{
+color:#333;
+}
+
+form{
+background:white;
+padding:20px;
+border-radius:10px;
+width:400px;
+box-shadow:0px 0px 10px gray;
+margin-bottom:30px;
+}
+
+input,select,textarea{
+width:100%;
+padding:8px;
+margin-top:5px;
+margin-bottom:10px;
+border-radius:5px;
+border:1px solid gray;
+}
+
+input[type="submit"]{
+background-color:#00b894;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+input[type="reset"]{
+background-color:#d63031;
+color:white;
+border:none;
+cursor:pointer;
+}
+
+table{
+width:100%;
+border-collapse:collapse;
+background:white;
+box-shadow:0px 0px 10px gray;
+}
+
+th,td{
+border:1px solid gray;
+padding:10px;
+text-align:center;
+}
+
+th{
+background:#ff512f;
+color:white;
+}
+
+p{
+text-align:center;
+color:gray;
+}
+
+</style>
+
+</head>
+
+<body>
+
+<h1>Graphic Design Workshop</h1>
+
+<hr>
+
+<h2>Event Information</h2>
+
+<ul>
+<li>Event Date: 25 April 2026</li>
+<li>Time: 10:00 AM</li>
+<li>Venue: College Seminar Hall</li>
+<li>Organizer: Design Club</li>
+</ul>
+
+<hr>
+
+<h2>Registration Form</h2>
+
+<form id="registrationForm">
+
+<h3>Personal Information</h3>
+
+<label>Name:</label>
+<input type="text" id="name" required>
+
+<label>Email:</label>
+<input type="email" id="email" required>
+
+<label>Date of Birth:</label>
+<input type="date" id="dob">
+
+<h3>Event Details</h3>
+
+<label>Mode of Participation:</label><br>
+
+<input type="radio" name="mode" value="Online"> Online<br>
+<input type="radio" name="mode" value="Offline"> Offline<br><br>
+
+<label>Comments:</label>
+<textarea id="comments" rows="4"></textarea>
+
+<br>
+
+<input type="checkbox" id="confirm"> I confirm that the above details are correct.
+
+<br><br>
+
+<input type="submit" value="Submit">
+<input type="reset" value="Reset">
+
+</form>
+
+<h2>Participants List</h2>
+
+<table id="participantsTable">
+
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Date of Birth</th>
+<th>Mode of Participation</th>
+</tr>
+
+</table>
+
+<p>© 2026 Graphic Design Workshop</p>
+
+<script>
+
+document.getElementById("registrationForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let name = document.getElementById("name").value;
+let email = document.getElementById("email").value;
+let dob = document.getElementById("dob").value;
+let confirm = document.getElementById("confirm").checked;
+
+let mode = document.querySelector('input[name="mode"]:checked');
+
+if(!confirm){
+alert("Please confirm the details.");
+return;
+}
+
+if(!mode){
+alert("Please select mode of participation.");
+return;
+}
+
+let table = document.getElementById("participantsTable");
+
+let row = table.insertRow();
+
+row.insertCell(0).innerHTML = name;
+row.insertCell(1).innerHTML = email;
+row.insertCell(2).innerHTML = dob;
+row.insertCell(3).innerHTML = mode.value;
+
+document.getElementById("registrationForm").reset();
+
+});
+
+</script>
+
+</body>
+</html>
