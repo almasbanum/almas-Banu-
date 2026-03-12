@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Activity Tracker</title>
+<link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+<header>
+<h1>Student Activity Tracker</h1>
+<p>Track your daily learning activities</p>
+</header>
+
+<div class="container">
+
+<h2>Activities</h2>
+
+<ul id="activityList">
+
+<li>
+<h3>HTML Basics</h3>
+<p>Learn basic HTML tags</p>
+<button onclick="markCompleted(this)">Mark Completed</button>
+<span class="status">Pending</span>
+</li>
+
+<li>
+<h3>CSS Styling</h3>
+<p>Learn colors, fonts and layout</p>
+<button onclick="markCompleted(this)">Mark Completed</button>
+<span class="status">Pending</span>
+</li>
+
+<li>
+<h3>JavaScript Introduction</h3>
+<p>Understand variables and functions</p>
+<button onclick="markCompleted(this)">Mark Completed</button>
+<span class="status">Pending</span>
+</li>
+
+<li>
+<h3>Build Mini Project</h3>
+<p>Create a simple webpage</p>
+<button onclick="markCompleted(this)">Mark Completed</button>
+<span class="status">Pending</span>
+</li>
+
+</ul>
+
+<div class="progress">
+<h3 id="progressText">0 out of 4 activities completed</h3>
+</div>
+
+</div>
+
+<script src="script.js"></script>
+
+</body>
+</html>
